@@ -14,24 +14,18 @@ Proyecto de animación NFT con dragón biomecánico y efectos de agujero negro.
 
 ## 🛠️ Tecnologías
 - HTML5/CSS3
-- JavaScript
-- GSAP (Animaciones)
+- JavaScript/GSAP
 - Web3.js
 - MetaMask
 
 ## 📄 Contrato
 `0x74daB9CaAf6C96dc5f4ec2935B25D9Bf290cFDF5`
 
-## 🚀 Instalación
+## 🚀 Inicio Rápido
 ```bash
-# Clonar el repositorio
 git clone https://github.com/ddepazos/dragonnft.git
-
-# Navegar al directorio
 cd dragonnft
-
-# Abrir en el navegador
-open index.html
+# Abrir index.html en tu navegador
 ```
 
 ## 🔗 Links Útiles
