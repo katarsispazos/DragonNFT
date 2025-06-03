@@ -1,0 +1,30 @@
+.nft-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 1000;
+}
+
+.nft-controls .tech-button {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nft-controls .tech-button:hover {
+    background: var(--accent-color);
+    color: black;
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+.nft-controls .tech-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,247 @@
+:root {
+    --line-color: rgb(255, 255, 255);
+    --shape-color: rgb(255, 255, 255);
+    --accent-color: rgb(0, 255, 255);
+    --glow-color: rgba(0, 255, 255, 0.6);
+    --hole-color: rgba(41, 39, 39, 0.706);
+    --ring-color-1: rgba(255, 140, 0, 0.8);
+    --ring-color-2: rgba(0, 255, 255, 0.6);
+}
+
+body {
+    margin: 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.animation-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos del agujero negro */
+.black-hole {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vmin;
+    height: 100vmin;
+    z-index: 0;
+}
+
+.black-hole::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(
+        circle at center,
+        var(--hole-color) 30%,
+        rgba(0, 0, 0, 0.9) 60%,
+        rgba(255, 140, 0, 0.3) 80%,
+        transparent 100%
+    );
+    border-radius: 50%;
+    box-shadow: 0 0 100px 20px rgba(0, 255, 255, 0.3);
+    z-index: 1;
+    animation: pulseCore 4s ease-in-out infinite;
+}
+
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 4px solid transparent;
+}
+
+.ring::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    background: linear-gradient(
+        45deg,
+        var(--ring-color-1),
+        var(--ring-color-2)
+    );
+    filter: drop-shadow(0 0 20px var(--accent-color));
+    animation: pulseRing 3s ease-in-out infinite;
+}
+
+.ring1 { width: 200px; height: 200px; animation: rotate1 10s linear infinite; }
+.ring2 { width: 400px; height: 400px; animation: rotate2 15s linear infinite reverse; }
+.ring3 { width: 600px; height: 600px; animation: rotate1 20s linear infinite; }
+.ring4 { width: 800px; height: 800px; animation: rotate2 25s linear infinite reverse; }
+.ring5 { width: 1000px; height: 1000px; animation: rotate1 30s linear infinite; }
+
+/* Estilos del dragón técnico */
+.dragon-structure {
+    transform-origin: center center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: floatDragon 6s ease-in-out infinite;
+}
+
+/* Actualizar el contenedor SVG */
+.shape-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vmin;
+    height: 100vmin;
+    z-index: 2;
+}
+
+.tech-shape {
+    fill: none;
+    stroke: var(--shape-color);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 8px var(--glow-color));
+}
+
+.tech-line {
+    stroke: var(--line-color);
+    stroke-width: 1;
+}
+
+.circuit-line {
+    stroke: var(--accent-color);
+    stroke-width: 3;
+    fill: none;
+    filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.node {
+    fill: var(--accent-color);
+    filter: drop-shadow(0 0 8px var(--accent-color));
+    r: 8;
+}
+
+/* Estilos para las alas */as alas */
+.wing {
+    transform-origin: center left;
+    animation: wingFlap 4s ease-in-out infinite;
+}
+
+.wing-details {
+    opacity: 0.8;
+    animation: wingGlow 2s ease-in-out infinite;
+}
+
+@keyframes rotate1 {
+    from { transform: translate(-50%, -50%) rotate(0deg); }eg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }; }
+}
+
+@keyframes rotate2 {@keyframes rotate2 {
+    from { transform: translate(-50%, -50%) rotate(360deg); }translate(-50%, -50%) rotate(360deg); }
+    to { transform: translate(-50%, -50%) rotate(0deg); }ate(0deg); }
+}
+
+@keyframes pulseCore {keyframes pulseCore {
+    0% { transform: translate(-50%, -50%) scale(1); }    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }nslate(-50%, -50%) scale(1.1); }
+    100% { transform: translate(-50%, -50%) scale(1); } { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes pulseRing {s pulseRing {
+    0% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }0% { opacity: 0.6; transform: scale(1.05); }
+    100% { opacity: 0.8; transform: scale(1); }{ opacity: 0.8; transform: scale(1); }
+}
+
+@keyframes floatDragon {s floatDragon {
+    0% {
+        transform: translate(400px, 400px) scale(2) rotate(0deg);   transform: translate(400px, 400px) scale(2) rotate(0deg);
+    }
+    25% {
+        transform: translate(405px, 395px) scale(2.02) rotate(1deg);   transform: translate(405px, 395px) scale(2.02) rotate(1deg);
+    }   }
+    50% {    50% {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}    }        filter: drop-shadow(0 0 15px var(--accent-color));    50% {    }        filter: drop-shadow(0 0 5px var(--glow-color));    0%, 100% {@keyframes wingGlow {}    }        transform: rotate(0deg);    100% {    }        transform: rotate(-3deg);    75% {    }        transform: rotate(0deg);    50% {    }        transform: rotate(5deg);    25% {    }        transform: rotate(0deg);    0% {@keyframes wingFlap {}    }        transform: translate(400px, 400px) scale(2) rotate(0deg);    100% {    }        transform: translate(395px, 395px) scale(2.02) rotate(-1deg);    75% {    }        transform: translate(400px, 390px) scale(2.01) rotate(0deg);        transform: translate(400px, 390px) scale(2.01) rotate(0deg);
+    }
+    75% {
+        transform: translate(395px, 395px) scale(2.02) rotate(-1deg);
+    }
+    100% {
+        transform: translate(400px, 400px) scale(2) rotate(0deg);
+    }
+}
+
+@keyframes wingFlap {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes wingGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px var(--glow-color));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px var(--accent-color));
+    }
+}
